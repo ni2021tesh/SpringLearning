@@ -40,5 +40,7 @@ public class TestJdbcTemplate {
             });
         });
 
+        sampleDao.getSampleNames().forEach(System.out::println);
+
     }
 }

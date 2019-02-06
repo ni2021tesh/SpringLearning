@@ -71,14 +71,17 @@ public class SampleDao {
 
     public Map<String, Object> getSampleMap() {
         final String SELECT_ALL_SAMPLE = "select * from sample where id = 6";
-        Map<String, Object> stringObjectMap = this.jdbcTemplateOracle.queryForMap(SELECT_ALL_SAMPLE);
-        return stringObjectMap;
+        return this.jdbcTemplateOracle.queryForMap(SELECT_ALL_SAMPLE);
     }
 
 
     public List<Map<String, Object>> getSampleList() {
         final String SELECT_ALL_SAMPLE = "select * from sample";
-        List<Map<String, Object>> queryForList = this.jdbcTemplateOracle.queryForList(SELECT_ALL_SAMPLE);
-        return queryForList;
+        return this.jdbcTemplateOracle.queryForList(SELECT_ALL_SAMPLE);
+    }
+
+    public List<String> getSampleNames() {
+        final String SELECT_SAMPLE_NAMES = "select name from sample";
+        return this.jdbcTemplateOracle.queryForList(SELECT_SAMPLE_NAMES, String.class);
     }
 }
