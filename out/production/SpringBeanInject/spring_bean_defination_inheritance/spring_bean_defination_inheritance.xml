@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="car" class="spring_bean_defination_inheritance.Car" abstract="true">
+        <property name="parentCompany" value="maruti"/>
+        <property name="engineType" value="diesel"/>
+        <property name="engineModel" value="4storke"/>
+    </bean>
+
+
+    <bean id="marutiCar" class="spring_bean_defination_inheritance.Car" parent="car">
+        <property name="id" value="1"/>
+        <property name="name" value="maruti800"/>
+    </bean>
+
+    <bean id="suzuki" class="spring_bean_defination_inheritance.Car" parent="car">
+        <property name="id" value="2"/>
+        <property name="name" value="suzuki"/>
+    </bean>
+
+    <bean id="mar800" class="spring_bean_defination_inheritance.Car" parent="car">
+        <property name="id" value="3"/>
+        <property name="name" value="mar800"/>
+    </bean>
+
+    <bean id="nano" class="spring_bean_defination_inheritance.Car" parent="car">
+        <property name="id" value="4"/>
+        <property name="name" value="nano"/>
+        <property name="engineType" value="petrol"/>
+        <property name="engineModel" value="2stroke"/>
+    </bean>
+
+</beans>

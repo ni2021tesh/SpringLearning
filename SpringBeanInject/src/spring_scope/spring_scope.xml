@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+    <bean class="spring_scope.SingletonBean" id="singletonBean" scope="singleton" lazy-init="false">
+        <property name="message" value="This is my First SingletonBean"/>
+        <property name="name" value="singlu"/>
+        <property name="createdBy" value="nitessh"/>
+    </bean>
+
+    <bean class="spring_scope.SingletonBean" id="singletonBean1" scope="singleton" lazy-init="false">
+        <property name="message" value="This is my First SingletonBean11111111111111"/>
+        <property name="name" value="singlu11111111111"/>
+        <property name="createdBy" value="nitessh111111111"/>
+    </bean>
+
+    <bean class="spring_scope.SingletonBean" id="singletonBean2" scope="singleton" lazy-init="false" primary="true">
+        <property name="message" value="This is my First SingletonBean222222222222"/>
+        <property name="name" value="singlu2"/>
+        <property name="createdBy" value="nitessh2"/>
+    </bean>
+
+</beans>

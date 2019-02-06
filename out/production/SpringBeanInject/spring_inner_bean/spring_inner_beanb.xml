@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="spring_inner_bean.Student" id="student" name="nitesh,surendra,jha,himanshu">
+        <qualifier value="Student"/>
+        <property name="name" value="Nitesh Surendra Jha"/>
+        <property name="id" value="1"/>
+        <property name="address">
+            <bean class="spring_inner_bean.Address">
+                <property name="city" value="palghar"/>
+                <property name="country" value="india"/>
+                <property name="state" value="maharashtra"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>
