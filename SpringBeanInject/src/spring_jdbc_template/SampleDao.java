@@ -35,7 +35,7 @@ public class SampleDao {
     }
 
 
-    public Sample getSampleById(int id) {
+    Sample getSampleById(int id) {
         final String SELECT_SAMPLE = "select * from sample where id = ?";
         Object[] param = new Object[]{id};
         int[] type = new int[]{Types.INTEGER};
@@ -44,7 +44,7 @@ public class SampleDao {
     }
 
 
-    public List<Sample> getAllSampleRecord() {
+    List<Sample> getAllSampleRecord() {
         final String SELECT_ALL_SAMPLE = "select * from sample";
         List<Sample> samples = this.jdbcTemplateOracle.query(SELECT_ALL_SAMPLE, SampleDao::mapRSTOSample);
         return samples;
@@ -69,18 +69,18 @@ public class SampleDao {
     }
 
 
-    public Map<String, Object> getSampleMap() {
+    Map<String, Object> getSampleMap() {
         final String SELECT_ALL_SAMPLE = "select * from sample where id = 6";
         return this.jdbcTemplateOracle.queryForMap(SELECT_ALL_SAMPLE);
     }
 
 
-    public List<Map<String, Object>> getSampleList() {
+    List<Map<String, Object>> getSampleList() {
         final String SELECT_ALL_SAMPLE = "select * from sample";
         return this.jdbcTemplateOracle.queryForList(SELECT_ALL_SAMPLE);
     }
 
-    public List<String> getSampleNames() {
+    List<String> getSampleNames() {
         final String SELECT_SAMPLE_NAMES = "select name from sample";
         return this.jdbcTemplateOracle.queryForList(SELECT_SAMPLE_NAMES, String.class);
     }
