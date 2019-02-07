@@ -19,13 +19,12 @@ public class TestJdbcTemplate {
         SampleDao sampleDao = applicationContext.getBean(SampleDao.class);
         Sample sampleById = sampleDao.getSampleById(2);
         System.out.println(sampleById.toString());
-/*
-        System.out.println("*****************Inserting single Record into Oracle Database************************");
+    /*    System.out.println("*****************Inserting single Record into Oracle Database************************");
         Sample sample = new Sample();
         sample.setName("Nitesh Surendra Jha");
         sample.setState("Maharashtra");
         sample.setCountry("India");
-        sample.setAddress("Palghar Malad");
+        sample.setAddress("Palghar");
         sampleDao.saveSample(sample);*/
 
         System.out.println("*****************Fetching All Record From Oracle Database***************************");
@@ -41,6 +40,8 @@ public class TestJdbcTemplate {
         });
 
         sampleDao.getSampleNames().forEach(System.out::println);
+
+        System.out.println(sampleDao.getSampleByCity());
 
     }
 }

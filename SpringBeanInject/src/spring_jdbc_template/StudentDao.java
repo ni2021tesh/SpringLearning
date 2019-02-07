@@ -15,8 +15,6 @@ public class StudentDao {
 
     private JdbcTemplate jdbcTemplateMysql;
 
-    private JdbcTemplate jdbcTemplateOracle;
-
     private static Student mapResultSetToStudent(ResultSet rs, int rowNum) {
         System.out.println("Mapping Result Set to Student..");
         Student student = new Student();
@@ -30,14 +28,6 @@ public class StudentDao {
             e.printStackTrace();
         }
         return student;
-    }
-
-    public JdbcTemplate getJdbcTemplateOracle() {
-        return jdbcTemplateOracle;
-    }
-
-    public void setJdbcTemplateOracle(JdbcTemplate jdbcTemplateOracle) {
-        this.jdbcTemplateOracle = jdbcTemplateOracle;
     }
 
     public JdbcTemplate getJdbcTemplateMysql() {
