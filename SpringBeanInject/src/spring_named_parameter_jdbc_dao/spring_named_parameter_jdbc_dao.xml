@@ -3,18 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:spring_jdbc_dao_support/database.properties"/>
+        <property name="location" value="classpath:spring_named_parameter_jdbc_dao/database.properties"/>
     </bean>
-
-    <bean id="dataSourceMysql" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="username" value="${db.username}"/>
-        <property name="password" value="${db.pwd}"/>
-        <property name="url" value="${db.url}"/>
-        <property name="driverClassName" value="${db.driverClassName}"/>
-    </bean>
-
 
     <bean id="dataSourceOracle" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="username" value="${db.oracle.username}"/>
@@ -23,12 +14,7 @@
         <property name="driverClassName" value="${db.oracle.driverClassName}"/>
     </bean>
 
-
-    <bean id="studentDao" class="spring_jdbc_dao_support.StudentDao">
-        <property name="dataSource" ref="dataSourceMysql"/>
-    </bean>
-
-    <bean class="spring_jdbc_dao_support.SampleDao" id="sampleDao">
+    <bean class="spring_named_parameter_jdbc_dao.VenueDao">
         <property name="dataSource" ref="dataSourceOracle"/>
     </bean>
 
