@@ -8,6 +8,7 @@ public class CustomBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         System.out.println("postProcessBeforeInitialization called..");
         if (bean instanceof LifeCycle) {
+            System.out.println();
             ((LifeCycle) bean).setMessage("This is the new message configured from postProcessBeforeInitialization");
             return bean;
         }

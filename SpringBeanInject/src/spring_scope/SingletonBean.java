@@ -1,13 +1,12 @@
 package spring_scope;
 
-import java.util.Objects;
-
 public class SingletonBean {
 
     private String name;
     private String message;
     private String createdBy;
-    private static int count = 0;
+
+    static int count = 0;
 
     static {
         count++;
@@ -47,10 +46,6 @@ public class SingletonBean {
 
     @Override
     public String toString() {
-        return "SingletonBean{" +
-                "name='" + name + '\'' +
-                ", message='" + message + '\'' +
-                ", createdBy='" + createdBy + '\'' +
-                '}';
+        return "SingletonBean{" + "name='" + name + '\'' + ", message='" + message + '\'' + ", createdBy='" + createdBy + '\'' + '}';
     }
 }

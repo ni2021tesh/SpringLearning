@@ -4,8 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="helloWorldBean" class="info.niteshjha.HelloWorldBean" lazy-init="false">
-        <property name="message" value="hello.........................."/>
+    <bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource">
+        <property name="basename" value="spring_message_resource_bundle.Hello"/>
     </bean>
+
 
 </beans>

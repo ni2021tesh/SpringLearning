@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
 
     <bean class="spring_depends_on.Student" id="student" name="nitesh,surendra,jha,himanshu"
-          depends-on="address,address1">
-        <qualifier value="Student"/>
+          depends-on="address1,address" >
+        <!-- <qualifier value="Student"/>-->
         <property name="name" value="Nitesh Surendra Jha"/>
         <property name="id" value="1"/>
-        <property name="address" ref="address"/>
     </bean>
+
 
     <bean id="address" class="spring_depends_on.Address">
         <property name="city" value="palghar"/>
         <property name="country" value="india"/>
         <property name="state" value="maharashtra"/>
     </bean>
-
 
     <bean id="address1" class="spring_depends_on.Address1">
     </bean>

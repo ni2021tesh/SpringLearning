@@ -9,7 +9,7 @@ public class FactoryBean {
     @Autowired
     private FactorySecondBean factorySecondBean;
 
-    public FactoryBean() {
+    private FactoryBean() {
         System.out.println("Private Constructor called...");
     }
 

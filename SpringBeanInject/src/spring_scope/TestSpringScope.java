@@ -18,6 +18,6 @@ public class TestSpringScope {
         SingletonBean bean3 = applicationContext.getBean(SingletonBean.class);
         System.out.println(bean3.hashCode());
 
-        System.out.println(SingletonBean.getCount());
+        System.out.println(SingletonBean.count);
     }
 }

@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="helloWorldBean" class="info.niteshjha.HelloWorldBean" lazy-init="false">
-        <property name="message" value="hello.........................."/>
+    <bean id="service" class="spring_multiple_config.Service">
+        <property name="dao" ref="dao"/>
     </bean>
 
 </beans>

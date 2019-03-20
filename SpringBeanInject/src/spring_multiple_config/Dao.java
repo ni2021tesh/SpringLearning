@@ -15,7 +15,6 @@ public class Dao {
             studentMap.put("3", "Himanshu Jha");
             studentMap.put("4", "Surendra Jha");
             studentMap.put("5", "Renu Jha");
-            studentMap.put("6", "Shital Jha");
         }
     }
 
